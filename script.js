@@ -19,7 +19,7 @@ const app = (function () {
     navButtons.forEach((button) => {
         const navLinkPathname = new URL(button.href).pathname
 
-        if ((activePage === navLinkPathname) || activePage === 'index.html' && navLinkPathname === '/') {
+        if ((activePage === navLinkPathname) || activePage === 'index.html' && navLinkPathname === '/' || navLinkPathname === undefined) {
             button.classList.add('active')
         }
 
