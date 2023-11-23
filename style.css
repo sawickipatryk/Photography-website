@@ -276,8 +276,7 @@ header {
     text-align: center;
 }
 
-.people-say__arrow-left,
-.people-say__arrow-right {
+.people-say__arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -288,11 +287,11 @@ header {
 
 }
 
-.people-say__arrow-left {
+.people-say__arrow:first-child {
     left: -10px;
 }
 
-.people-say__arrow-right {
+.people-say__arrow:last-child {
     right: -10px;
 }
 
@@ -306,15 +305,39 @@ header {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 100%;
-    overflow: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    gap: 10px;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .carousel__card {
+    cursor: grab;
+    user-select: none;
 }
 
 .carousel__card {
+    scroll-snap-align: start;
     background-color: var(--second-color);
     flex-direction: column;
     padding: 20px 30px;
     height: 350px;
     border-radius: 20px;
+
 }
 
 .carousel__card svg {
