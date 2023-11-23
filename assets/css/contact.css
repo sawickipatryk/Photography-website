@@ -289,6 +289,18 @@ footer {
 }
 
 
+.contact__left-container {
+    text-align: center;
+}
+
+.contact__information p {
+    font-size: var(--description-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: 20px;
+}
+
+
+
 @media screen and (min-width:768px) {
 
 
@@ -353,6 +365,29 @@ footer {
         font-weight: var(--font-regular);
         margin: 0 20px;
         width: auto;
+    }
+
+    .contact__container {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .contact__left-container {
+        display: flex;
+        justify-content: center;
+        width: 30%;
+    }
+
+    .contact__information p {
+        font-size: var(--description-font-size);
+        font-weight: var(--font-medium);
+        margin-bottom: 15px;
+    }
+
+    .contact__form {
+        width: 50%;
     }
 
 }
