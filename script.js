@@ -13,6 +13,17 @@ const app = (function () {
         navLinks.classList.remove('active')
     })
 
+    const navButtons = document.querySelectorAll('.nav__link')
+    const activePage = window.location.pathname
+
+    navButtons.forEach((button) => {
+        if (button.href.includes(`${activePage}`)) {
+            button.classList.add('active')
+        }
+
+    })
+
+
     const carousel = document.querySelector('.carousel')
     const arrowBts = document.querySelectorAll('.people-say__arrow')
     const firstCardWith = carousel.querySelector('.carousel__card').offsetWidth

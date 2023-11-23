@@ -151,6 +151,10 @@ header {
     margin-bottom: 30px;
 }
 
+.nav__link.active {
+    color: var(--button-color);
+}
+
 
 .nav__container {
     position: fixed;
