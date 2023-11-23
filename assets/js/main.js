@@ -14,7 +14,9 @@ const app = (function () {
     const navButtons = document.querySelectorAll('.nav__link')
     const activePage = window.location.pathname
 
+    console.log(activePage)
     navButtons.forEach((button) => {
+
         if (button.href.includes(`${activePage}`)) {
             button.classList.add('active')
         }

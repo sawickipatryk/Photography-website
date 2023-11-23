@@ -23,7 +23,6 @@ const app = (function () {
 
     })
 
-
     const carousel = document.querySelector('.carousel')
     const arrowBts = document.querySelectorAll('.people-say__arrow')
     const firstCardWith = carousel.querySelector('.carousel__card').offsetWidth
