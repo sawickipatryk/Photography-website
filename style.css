@@ -150,9 +150,10 @@ header {
     margin-bottom: 30px;
 }
 
+/* 
 a:is(:active) {
     color: var(--button-color);
-}
+} */
 
 .nav__link.active {
     color: var(--button-color);
